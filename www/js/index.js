@@ -35,6 +35,7 @@ $(document).ready(function () {
                 if (res.result.isCorrect) {
                     $('.correct').css('display','block');
                     $('.wrong').css('display','none');
+                    $('#correct_answer_btn').css('display','none');
                 } else {
                     $('.correct').css('display','none');
                     $('.wrong').css('display','block');
@@ -49,4 +50,22 @@ $(document).ready(function () {
         if (e.keyCode === 13) submitAnswer();
     });
     $('#submit').on('click', submitAnswer);
+    
+    $('#show_A').on('click', function () {
+        console.log('clicked');
+        $.ajax({
+            url: '/api/answer?index=' + index,
+            method: 'GET',
+            headers: {
+                Accept: 'application/json'
+            },
+            success: function (res) {
+                console.log(res.result.answer);
+                    $('#correct_answer').html(res.result.answer);
+                    $('#correct_answer_btn').css('display','block');
+                    $('.wrong').css('display','none');
+            }
+        });
+    });
+    
 });

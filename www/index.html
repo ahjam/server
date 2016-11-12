@@ -33,14 +33,20 @@
         <div class="row">
                 <div class="wrong">
                     틀렸습니다!
-                    <a class="waves-effect waves-light btn">정답보기</a>
+                    <a id="show_A" class="waves-effect waves-light btn">정답보기</a>
                 </div>
         </div>
         <div class="row">
                 <div class="correct">
                     정답입니다!
-                    <a class="waves-effect waves-light btn">다음문제</a>
+                    <a id="next_Q" class="waves-effect waves-light btn" onclick="location.reload();">다음문제</a>
                 </div>
+        </div>
+        <div class="row">
+          <div id="correct_answer_btn">
+                <div id="correct_answer"></div>
+                <a id="next_Q" class="waves-effect waves-light btn" onclick="location.reload();">다음문제</a>
+          </div>
         </div>
         
       <!--Import jQuery before materialize.js-->

@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     const index = req.query.index;
     const answer = db[index].a;
 
-    res.status(200).json({ results: { answer } });
+    res.status(200).json({ result: { answer } });
 });
 
 // POST /api/answer

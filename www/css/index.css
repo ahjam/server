@@ -55,6 +55,14 @@
     display: none;
 }
 
+#correct_answer_btn {
+    color: black;
+    font-size: 40px;
+    font-family: dong;
+    text-align: center;
+    display: none;
+}
+
 .row .col.s6 {
     width: 70%;
     margin-left: auto;
